@@ -1,4 +1,11 @@
-# link0/bunq
+link0/bunq
+==========
+[![Latest Stable Version](https://poser.pugx.org/link0/bunq/v/stable.svg)](https://packagist.org/packages/link0/bunq)
+[![Total Downloads](https://poser.pugx.org/link0/bunq/downloads.svg)](https://packagist.org/packages/link0/bunq)
+[![License](https://poser.pugx.org/link0/bunq/license.svg)](https://packagist.org/packages/link0/bunq)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/link0/bunq/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/link0/bunq/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/link0/bunq/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/link0/bunq/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/link0/bunq/badges/build.png?b=master)](https://scrutinizer-ci.com/g/link0/bunq/build-status/master)
 
 This library implements the bunq API.
 
@@ -27,7 +34,8 @@ $keypair = Keypair::fromStrings(
 // Replace this with what you received from the app
 $apiKey = 'foobarbaz';
 
-$environment = new Sandbox();
+$debugMode = true;
+$environment = new Sandbox($debugmode);
 $client = new Client($environment, $keypair);
 
 $installationService = new InstallationService($client);
